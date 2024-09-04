@@ -80,7 +80,11 @@ function M.highlight_colors(min_row, max_row, active_buffer_id)
 		TAILWIND = {
 			is_enabled = options.enable_tailwind and not utils.has_tailwind_css_lsp(),
 			patterns = { colors.get_tailwind_named_color_pattern() }
-		}
+		},
+		CSS_VARS = {
+			is_enabled = options.enable_tailwind,
+			patterns = { color_patterns.shadcn_css_var_regex },
+		},
 	}
 
 	for _, config in pairs(patterns_config) do
