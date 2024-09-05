@@ -6,7 +6,7 @@ M.hex_0x_regex = "%f[%w_]0x%x%x%x+%f[^%w_]"
 M.hsl_regex = "hsla?[(]+" .. string.rep("%s*%d?%.?%d+%%?d?e?g?t?u?r?n?%s*", 3, "[,%s]") .. "[%s,/]?%s*%d*%.?%d*%%?%s*[)]+"
 
 
-M.shadcn_css_var_regex = "%-%-[%w%-]+%s*:%s*%d+%s+%d+%.?%d*%%%s+%d+%.?%d*%%"
+M.shadcn_css_var_regex = "%-%-[%w%-]+%s*:%s*%d+%.?%d*%s+%d+%.?%d*%%%s+%d+%.?%d*%%"
 M.var_regex = "%-%-[%d%a-_]+"
 M.var_declaration_regex = M.var_regex .. ":%s*" .. M.hex_regex
 M.var_usage_regex = "var%(" .. M.var_regex .. "%)"
